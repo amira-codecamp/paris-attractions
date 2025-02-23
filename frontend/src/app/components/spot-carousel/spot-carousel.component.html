@@ -1,0 +1,40 @@
+<div *ngIf="spot" class="container mt-5">
+    <header class="carousel-header d-flex flex-column">
+        <div class="spot-details mb-3">
+            <h5>{{ spot.name }}</h5>
+            <p>{{ spot.address.street }}, {{ spot.address.zipcode }} {{ spot.address.city }}</p>
+        </div>
+        <mat-chip-set>
+            <mat-chip *ngFor="let tag of spot.tags" class="tag-chip">
+                <p class="mb-0">{{ tag }}</p>
+            </mat-chip>
+        </mat-chip-set>
+    </header>
+    <mat-divider class="my-divider"></mat-divider>
+    <div class="row mt-3">
+        <section class="carousel-body col-md-8">
+            <carousel>
+                <slide *ngFor="let backdrop of spot.backdrops">
+                    <img [src]="backdrop" [alt]="spot.name + ' image'" class="carousel-image">
+                </slide>
+            </carousel>
+        </section>
+        <aside class="col-md-4">
+            <div class="reviews-section">
+                <ul class="reviews-list">
+                    <li *ngFor="let review of spot.reviewsids" class="review-item">
+                        <p class="review-text">{{ review.body }}</p>
+                        <p class="review-rate">Rating: {{ review.rate }} / 5</p>
+                    </li>
+                </ul>
+                <p class="experience-message">
+                    <span>Have you been to {{ spot.name }} ? Share your experience with us !
+                        <button mat-raised-button color="primary" class="review-button" (click)="addReview()">
+                            <mat-icon>add_comment</mat-icon>
+                        </button>
+                    </span>
+                </p>
+            </div>
+        </aside>
+    </div>
+</div>

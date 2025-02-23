@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <mat-grid-list cols="3" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let spot of spots">
+     <a [routerLink]="[spot.placeid]" class="grid-tile-link">
+        <div class="image-container">
+          <img [src]="spot.image" alt="Spot Image" class="spot-image">
+        </div>
+        <mat-grid-tile-footer class="tile-footer">
+          <span class="spot-name">{{ spot.name }}</span>
+        </mat-grid-tile-footer>
+      </a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

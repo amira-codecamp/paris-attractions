@@ -1,0 +1,23 @@
+<div class="form-container">
+  <h2>Give us your feedback</h2>
+  
+  <form (ngSubmit)="onSubmit()" #form="ngForm" class="form-class">
+    <div class="form-group">
+      <label for="rating">Rate</label>
+      <select id="rating" [(ngModel)]="rating" name="rating" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <textarea id="comment" [(ngModel)]="comment" name="comment" rows="4" required></textarea>
+    </div>
+
+    <button type="submit" [disabled]="!form.valid">Send</button>
+  </form>
+</div>

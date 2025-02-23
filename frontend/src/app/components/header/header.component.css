@@ -1,0 +1,12 @@
+.mat-toolbar{
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    justify-content: space-between;
+    height: 3rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+mat-icon.bi {
+    color: white !important;
+}
