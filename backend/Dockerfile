@@ -7,4 +7,4 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:23-jdk
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["sh", "-c", "java -jar app.jar --spring.data.mongodb.uri=mongodb+srv://${USER}:${PASSWORD}@${CLUSTER}/${DATABASE}?retryWrites=true&w=majority"]
