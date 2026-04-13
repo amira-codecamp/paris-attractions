@@ -10,9 +10,15 @@ public class CorsConfig {
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
-        return registry -> registry.addMapping("/**")
-                .allowedOrigins("https://paris-attractions-website-8f5z.onrender.com")
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                .allowedHeaders("*");
+        return new WebMvcConfigurer() {
+
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**")
+                        .allowedOrigins("https://paris-attractions-website-8f5z.onrender.com")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedHeaders("*");
+            }
+        };
     }
 }
