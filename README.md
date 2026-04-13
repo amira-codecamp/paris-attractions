@@ -1,21 +1,17 @@
-## PARIS-ATTRACTIONS: A Full Stack Web Application
+# 🇫🇷 Paris Attractions
 
-Welcome to **paris-attractions**, a web application that allows users to discover the most attractive spots in Paris, France!
+A full-stack web app to discover the most beautiful places in Paris.
 
-The application is built with a **frontend** in **Angular**, and a **backend** powered by **Spring Boot**, **Java**, and **MongoDB**.
+## 🛠 Tech Stack
+- **Frontend:** Angular  
+- **Backend:** Spring Boot (Java/Maven)  
+- **Database:** MongoDB (Atlas)
 
-## Deployment
+## Live Demo
+👉 https://paris-attractions-website-8f5z.onrender.com/
 
-The live version of the application is hosted on Render.
+## 📸 Preview
 
-[paris-attractions](https://paris-attractions-website-8f5z.onrender.com/)
+![Screenshot](image.png)
 
-## Screenshots
-
-Here’s a sneak peek of the app:
-
-![App Screenshot](image.png)
-
----
-
-![App Screenshot2](image2.png)
+![Screenshot](image2.png)
