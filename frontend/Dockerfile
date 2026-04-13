@@ -7,7 +7,7 @@ COPY . .
 
 ARG SERVER_HOST_URL
 ENV SERVER_HOST_URL=$SERVER_HOST_URL
-RUN echo "export const environment = { production: true, api_url: '$SERVER_HOST_URL' };" > src/environments/environment.ts
+RUN echo "export const environment = { production: true, api_url: '$SERVER_HOST_URL' };" > src/app/environments/environment.ts
 
 RUN npm run build
 
